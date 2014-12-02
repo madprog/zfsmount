@@ -4,11 +4,11 @@ zfsmount
 Script to automatically install the native ZFS module on a LiveCD instance
 
 I also use it to mount my ZFS root filesystem from the Ubuntu rescue instance on online.net.
-Once the zfsroot.sh script is on the boot partition, I can run the following commands:
+Once the zfsmount.sh script is on the boot partition, I can run the following commands:
 
     ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no user@host -p 22
     mount /dev/sda1 /mnt
-    /mnt/zfsroot.sh
+    /mnt/zfsmount.sh
 
 `-o UserKnownHostsFile=/dev/null` and `-o StrictHostKeyChecking=no` are only needed for a rescue connection: without these options, the connection would be refused, as the temporary SSH server has a different key.
 
