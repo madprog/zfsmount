@@ -18,3 +18,9 @@ In order to install a native-ZFS Linux, you can follow these excellent tutoriels
 
 [1]: https://github.com/zfsonlinux/pkg-zfs/wiki/HOWTO-install-Debian-GNU-Linux-to-a-Native-ZFS-Root-Filesystem
 [2]: https://github.com/zfsonlinux/pkg-zfs/wiki/HOWTO-install-Ubuntu-to-a-Native-ZFS-Root-Filesystem
+
+An idea can be to always have this file on the boot partition. You can install it using these commands:
+
+    mount /dev/sda1 /mnt
+    wget -o /mnt/zfsmount.sh https://raw.githubusercontent.com/madprog/zfsmount/master/zfsmount.sh
+    chmod +x /mnt/zfsmount.sh
